@@ -4,9 +4,8 @@ import re
 
 # 1. 填入你提供的那 3 个巨大的开源项目订阅源
 SOURCES = [
-    "https://githubusercontent.com",
-    "https://bulinkbulink.com",
-    "https://githubusercontent.com"
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
+    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha-All-Type.txt"
 ]
 
 # 2. 包含过滤正则：只保留优质看视频协议 + 目标地区（含美国、加拿大、俄罗斯等）
