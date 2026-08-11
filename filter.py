@@ -13,8 +13,22 @@ SOURCES = [
     "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha-All-Type.txt",
 ]
 
-# 2. 包含过滤正则：只保留优质看视频协议 + 目标地区（含美国、加拿大、俄罗斯等）
-INCLUDE_REGEX = r"(?i)hy2|hysteria|reality|vless|us|ca|ru|hk|sg|jp|tw|美国|加拿大|俄罗斯|俄国|香港|新加坡|日本|台湾"
+# 2. 🎯 优化后的包含正则：锁定国内直连最爽的亚太核心国家和地区（中英文、代码全覆盖）
+INCLUDE_REGEX = (
+    r"(?i)hy2|hysteria|reality|vless|"
+    r"hk|hongkong|香港|"
+    r"tw|taiwan|台湾|"
+    r"jp|japan|日本|"
+    r"sg|singapore|新加坡|"
+    r"kr|korea|韩国|南韩|"
+    r"mo|macao|macau|澳门|"
+    r"my|malaysia|马来西亚|"
+    r"th|thailand|泰国|"
+    r"vn|vietnam|越南|"
+    r"ph|philippines|菲律宾|"
+    r"au|australia|澳大利亚|澳洲|"
+    r"us|unitedstates|美国|美"
+)
 
 # 3. 排除过滤正则：剔除导致 Karing 报错的 blake3 加密、广告节点和无效文本
 EXCLUDE_REGEX = r"(?i)blake3|aes-256-gcm|官网|网站|到期|剩余|群|通知|公告|广告|freefq"
