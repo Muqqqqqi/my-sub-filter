@@ -1,0 +1,28 @@
+name: Auto Filter Nodes
+on:
+  schedule:
+    - cron: '0 */6 * * *' # 每 6 小时在 GitHub 云端后台默默洗一次节点
+  workflow_dispatch: # 支持你在网页端随时手动点击「Run workflow」立即刷新
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+        
+    - name: Run filter script
+      run: python filter.py
+      
+    - name: Commit and Push to Repo
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@://github.com"
+        git add sub_filtered.txt
+        git commit -m "自动更新过滤节点" || exit 0
+        git push
