@@ -20,9 +20,9 @@ INCLUDE_REGEX = r"(?i)hy2|hysteria|reality|vless|us|ca|ru|hk|sg|jp|tw|美国|加
 EXCLUDE_REGEX = r"(?i)blake3|aes-256-gcm|官网|网站|到期|剩余|群|通知|公告|广告|freefq"
 
 # ================= 测速与延迟过滤参数 =================
-MAX_DELAY_MS = 500  # 🎯 目标延迟门槛：只保留 500 毫秒以内的节点
-TIMEOUT = 0.2  # 超时时间同步缩短为 0.2 秒（即 200ms），超过此时间直接断开
-CONCURRENCY_LIMIT = 400  # 并发测速上限
+MAX_DELAY_MS = 100  # 🎯 目标延迟门槛：只保留 100 毫秒以内的节点
+TIMEOUT = 0.1  # 超时时间同步缩短为 0.1 秒（即 100ms），超过此时间直接断开
+CONCURRENCY_LIMIT = 500  # 并发测速上限
 
 
 def decode_content(content):
