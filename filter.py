@@ -9,8 +9,7 @@ from urllib.parse import urlparse
 
 # 1. 填入你提供的那 3 个巨大的开源项目订阅源
 SOURCES = [
-    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt",
-    "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/V2Ray-Config-By-EbraSha-All-Type.txt",
+    "https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub1.txt"
 ]
 
 # 2. 🎯 优化后的包含正则：锁定国内直连最爽的亚太核心国家和地区（中英文、代码全覆盖）
